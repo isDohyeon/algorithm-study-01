@@ -37,7 +37,6 @@ public class BOJ_20546_기적의매매법 {
                 // 주가의 상승or하락 비교를 위한 전날 주가 갱신
                 lastDayStock = todayStock;
             }
-
             int jhAssets = junhyeon.getTotalAssets(lastDayStock);
             int smAssets = seongmin.getTotalAssets(lastDayStock);
             bw.write(configWinner(jhAssets, smAssets));
