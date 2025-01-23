@@ -21,8 +21,6 @@ public class BOJ_1012_유기농배추 {
     private static int[] dx = {-1, 1, 0, 0};
     private static int[] dy = {0, 0, 1, -1};
 
-    private static int count;
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -44,6 +42,7 @@ public class BOJ_1012_유기농배추 {
                 map[y][x] = 1;
             }
             // 4. 배추밭 탐색
+            int count = 0;
             for (int y = 0; y < N; y++) {
                 for (int x = 0; x < M; x++) {
                     // 방문하지 않은 배추에 대 BFS로 연결된 배추 탐색 후 카운트 증가
@@ -55,7 +54,6 @@ public class BOJ_1012_유기농배추 {
             }
             // 5. 결과 저장 후 카운트 초기화
             bw.write(count + "\n");
-            count = 0;
         }
         bw.close();
     }
